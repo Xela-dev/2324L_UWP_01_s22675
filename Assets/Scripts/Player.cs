@@ -1,8 +1,5 @@
-﻿using System;
-
-public class Player : Character
+﻿public class Player : Character
 {
-    public static int CountKills => countkills;
     public static Player Instance => instance;
     
     private static int countkills;

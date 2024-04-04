@@ -2,11 +2,8 @@
 
 public class Bullet : MonoBehaviour
 {
-    [SerializeField] 
-    private float timeToDestroy;
-    
-    [SerializeField] 
-    private float speed;
+    [SerializeField] private float timeToDestroy;
+    [SerializeField] private float speed;
     
     private float timer;
 
@@ -22,9 +19,9 @@ public class Bullet : MonoBehaviour
         timer += Time.deltaTime;
     }
     
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (other.gameObject.TryGetComponent(out Character character))
+        if (collider.gameObject.TryGetComponent(out Character character))
         {
             character.TakeDamage();
             

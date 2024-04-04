@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Character : MonoBehaviour
 {
@@ -12,6 +11,7 @@ public class Character : MonoBehaviour
     
     protected Vector2 direction;
     protected Vector2 directionShoot;
+    
     private int health;
 
     protected void Awake() => health = maxHealth;

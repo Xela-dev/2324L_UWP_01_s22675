@@ -1,15 +1,14 @@
-using System;
 using TMPro;
 using UnityEngine;
 
 public class UI : MonoBehaviour
 {
     public static UI Instance => instance;
-
-    private static UI instance;
-
+    
     [SerializeField] private TextMeshProUGUI healthText;
     [SerializeField] private TextMeshProUGUI killsText;
+    
+    private static UI instance;
 
     private void Awake()
     {
